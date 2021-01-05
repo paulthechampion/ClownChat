@@ -9,11 +9,10 @@ app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
 
-const server=app.listen(2000, ()=>{
+
+const server=app.listen(process.env.PORT ||2000, ()=>{
    console.log("Listening to port 2000") 
 });
-
-
 const socket=require("socket.io");
 
 const io = socket(server)
@@ -33,6 +32,7 @@ socket.on('disconnect',()=>{
 });
 
 });
+
 
 app.use('/',indexRoute);
 ;
