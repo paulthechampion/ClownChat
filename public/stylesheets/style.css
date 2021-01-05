@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
+.clownDiv{text-align: center;}
+
+.header{text-align: center;color: aliceblue;font-size: 3em;}
+
+.formClass{position: fixed;bottom:2%}
+.message-inputClass{width:18em; height:2em;}
+.message-sendClass{height:1.8em; outline: none; border: none;
+     border-radius: 5px; background-color: rgb(12, 212, 12);color: aliceblue;padding-left: 1.5em;
+     padding-right: 1.5em; font-size: 1em;cursor: pointer;position: relative;right:0%}
+body{
+    font-family: 'Hanalei Fill', cursive;
+    background-image: linear-gradient(to right,  rgb(12, 12, 212), purple);
+  }
+#message-container{background-color: aliceblue;border-radius: 5px;padding-left: 1em;
+    max-height: 35em;overflow-y: auto;}  
+
+    @media(min-width :590px){
+        #message-container{
+            max-height: 44em; 
+    
+        }
+        .message-inputClass{
+            width:38em; height:4em;
+        }
+        .message-sendClass{
+            height:3.5em;
+        }
+    }
+
+ @media(min-width :1085px){
+    #message-container{
+        max-height: 33em; 
+
+    }
+    .message-inputClass{
+        width:80em; height:4em;
+    }
+    .message-sendClass{
+        height:3.5em;
+    }
+    }    
