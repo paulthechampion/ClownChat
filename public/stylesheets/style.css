@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap');
 .clownDiv{text-align: center;}
 
 .header{text-align: center;color: aliceblue;font-size: 3em;}
@@ -10,7 +11,7 @@
      border-radius: 5px; background-color: rgb(12, 212, 12);color: aliceblue;padding-left: 1.5em;
      padding-right: 1.5em; font-size: 1em;cursor: pointer;position: relative;right:0%}
 body{
-    font-family: 'Hanalei Fill', cursive;
+    font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to right,  rgb(12, 12, 212), purple);
   }
 #message-container{background-color: aliceblue;border-radius: 5px;padding-left: 1em;
