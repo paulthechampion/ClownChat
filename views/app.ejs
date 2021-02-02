@@ -1,18 +1,59 @@
 <h1 class="header">CLOWN CHAT</h1>
 
+<span class="bars-span">
+<i class="fa fa-bars" aria-hidden="true" onclick="show2()"></i>
+</span>
+<div>
+    <div id="message-container" class="message-container">
+        
+        <ol class="messages" id="messages"></ol>
 
-<div id="message-container">
         
         
-</div>
-    <div class="clownDiv">
-    <img src="image/clown.png" alt="clown" class="clown"/>
     </div>
-    <form id="send-container" class="formClass">
-        <input type="text" id="message-input" placeholder="Send a Message Clown" class="message-inputClass">
-        <input type="submit" id="send-button" value="Send" class="message-sendClass">
+    <div class="side-bar-main" id="side-bar-main">
+        <div style="text-align: center;">
+            <h2>Online Clowns <i class="fa fa-circle" aria-hidden="true"></i>
+            </h2>
+        </div>
+    <div class="side-bar" id="sidebar">
+    </div>
+    </div>
+</div>
+<div class="message-footer">
+        
+        <form id="send-container" class="formClass">
+            <input type="text" id="message-input" required placeholder="Send a Message Clown" class="message-inputClass">
+            
+            
+            <input type="submit" id="send-button" value="Send" class="message-sendClass">
 
-    </form>
+            <button type="button" id="send-location" class="message-sendClass message-locationClass"> Send Your Location</button>
+            
+            
+
+         </form>
+    </div>    
+        
+   
+    <script type="text/template" id="message-template">
+        <li class="message">
+            <div class="message-title">
+                <h4>{{user}} <span class="header-time">{{time}}</span></h4>
+                
+            </div>
+            <div class="message-body">
+               <p> {{message}} <a href="{{aHref}}" target="_blank">{{aMessage}}</a> </p>
+            </div>
+        </li>
+        
+    </script>
+
+    <script>
+        function show2(){
+            document.getElementById("side-bar-main").classList.toggle("active");
+        }
+    </script>
 
 
 

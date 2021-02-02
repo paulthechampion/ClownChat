@@ -1,44 +1,208 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap');
-.clownDiv{text-align: center;}
+html{
+    height: 100%;
+}
 
-.header{text-align: center;color: aliceblue;font-size: 3em;}
+.clownDiv{
+    text-align: center;
+}
 
-.formClass{position: fixed;bottom:2%}
-.message-inputClass{width:18em; height:2em;}
-.message-sendClass{height:1.8em; outline: none; border: none;
-     border-radius: 5px; background-color: rgb(12, 212, 12);color: aliceblue;padding-left: 1.5em;
-     padding-right: 1.5em; font-size: 1em;cursor: pointer;position: relative;right:0%}
+.header{
+    text-align: center;
+    color: aliceblue;
+    font-size: 3em;
+}
+
+
+.message-inputClass{
+    width:18em; 
+    height:3em;
+}
+.message-sendClass{   
+    height:2.8em; 
+    outline: none; 
+    border: none;
+     border-radius: 5px; 
+     background-color: rgb(12, 212, 12);
+     color: aliceblue;
+     padding-left: 1.5em;
+     padding-right: 1.5em; 
+     font-size: 1em;
+     cursor: pointer;
+     position: relative;
+     right:0%
+}
+
+.message-locationClass{ 
+   background-color: blue;
+   margin-top: 1em;
+   position: relative;
+   left: 25%;
+}
 body{
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to right,  rgb(12, 12, 212), purple);
   }
-#message-container{background-color: aliceblue;border-radius: 5px;padding-left: 1em;
-    max-height: 35em;overflow-y: auto;}  
 
-    @media(min-width :590px){
-        #message-container{
-            max-height: 44em; 
+li{
+    list-style: none;
+}
+h4{
+    margin: 0;
+    padding: 0;
+}
+.message-body{
+    position: relative;
+    bottom: 1em;
+}
+#message-container{
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding-left: 1em;
+    float: right;
+    height: 24em;
+    z-index: 0;
+    overflow-y: auto;
+    width: 97.3%;
+    margin-bottom: 1em;
+   }  
+.side-bar-main{
+       width: 250px;
+       float: left;
+       z-index: 5;
+       background-color: rgb(233, 230, 230);
+       height: 24em;
+       color: rgb(0, 0, 0);
+       border-radius: 5px;
+       position: absolute;
+       top:9.15em;
+       left: -250px;
+       transition: ease-in-out .5s;
+}
+
+.fa-circle{
+    font-size: .7em;
+    color: greenyellow;
+}
+
+.message-footer{
+   
+    padding-top: 4em;
+}
+.messages{
+    position: relative;
+    right:3em;
+}
+
+.header-time{
+    color: rgb(170, 170, 170);
+    font-size: .8em;
+}
+
+.you-joined{
+    margin-bottom: 1em;
+}
+
+.side-bar{
+    background-color: white;
+    padding: 1px;
     
-        }
-        .message-inputClass{
-            width:38em; height:4em;
-        }
-        .message-sendClass{
-            height:3.5em;
-        }
-    }
 
- @media(min-width :1085px){
+}
+
+.your-message{
+    background-color:rgb(161, 23, 161) ;
+    color: white;
+    padding-left: 2em;
+    padding-top: 1em;
+    width: 100%;
+}
+
+.their-message{
+    background-color:rgb(12, 12, 212) ;
+    color: white;
+    padding-left: 2em;
+    padding-top: 1em;
+    width: 100%;
+}
+
+.side-bar-main.active{
+    left: 0;
+}
+
+.fa-bars{
+    font-size: 1.5em;
+    color: white;
+}
+
+
+@media(min-width :413px){
     #message-container{
-        max-height: 33em; 
-
+       
+        height: 27.5em;
+        
+       }  
+    .side-bar-main{
+         height: 27.5em;
+         top:19.8%;;
+          
     }
     .message-inputClass{
-        width:80em; height:4em;
+        width:22em; 
+        height:3em;
+    }
+}
+@media(min-width :590px){
+        .side-bar-main{
+            height: 40em;
+            top:9.1em;
+        }
+        #message-container{
+            height: 40em;
+        }   
+        .message-inputClass{
+            width:47em; 
+            height:5em;
+        }
+        .message-sendClass{
+            height:4.5em;
+        }
+        .message-locationClass{ 
+           
+            left: 35%;
+         }
+    }
+
+@media(min-width :1085px){
+   
+    .message-inputClass{
+        width:72em;
+         height:5em;
     }
     .message-sendClass{
-        height:3.5em;
+        height:4.5em;
     }
+
+    #message-container{
+        width: 73.5%;
+        height: 25em;
+    }   
+
+    .side-bar-main{
+        width: 25%;
+        position: relative;
+        top:0;
+        left:0;
+        height: 25em;
+    }
+
+    .bars-span{
+        display: none;
+    }
+    .message-locationClass{ 
+        left: 0;
+        margin-top: 0;
+     }
     }    
