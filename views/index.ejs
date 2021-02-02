@@ -1,14 +1,20 @@
-<div>
+<div class="index-form-div">
     <form action="/chat">
         <div>
-            <label for="name">Display Name</label>
-            <input type="text" name="name" required autofocus/>
+            <div class="label-div">
+                 <label for="name" class="index-label">Display Name</label>
+            </div>
+            <input type="text" name="name" required autofocus class="index-input"/>
         </div>
         <div>
-            <label for="room">Create room or Join exisiting room</label>
-            <input type="text" name="room" required autofocus/>
+            <div class="label-div">
+                <label for="room" class="index-label">Create room or Join exisiting room</label>
+            </div>
+            <input type="text" name="room" required autofocus class="index-input"/>
 
-            <button>Start Chatting</button>
+            <div class="button-div">
+            <button class="index-btn">Start Chatting</button>
+            </div>
         </div>
     </form>
 </div>

@@ -137,7 +137,28 @@ h4{
     color: white;
 }
 
-
+.index-form-div{
+    text-align: center;
+    margin-top: 15em;
+}
+.index-label{
+    color: white;
+    font-size: 1.3em;
+}
+.index-input{
+    width: 15em;
+    height: 2em;
+}
+.index-btn{
+    border: none;
+    outline: none;
+    background-color: rgb(134, 214, 14);
+    color: white;
+    padding:10px;
+    border-radius: 5px;
+    margin-top: 1em;
+    font-size: 1em;
+}
 @media(min-width :413px){
     #message-container{
        
@@ -205,4 +226,20 @@ h4{
         left: 0;
         margin-top: 0;
      }
+     .index-form-div{
+        margin-top: 15%;
+    }
+    .index-label{
+        font-size: 2em;
+    }
+    .index-input{
+        width: 20em;
+        height: 2em;
+    }
+    .index-btn{
+        padding:10px;
+        border-radius: 5px;
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
     }    
