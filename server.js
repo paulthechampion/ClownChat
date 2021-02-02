@@ -89,13 +89,14 @@ io.on('connection', socket=>{
     }
     });
     socket.on("create-location-message",(coords)=>{
-        io.emit('location-message',{
+        let user= users.getUser(socket.id)
+        io.to(user.id).emit('location-message',{
             name:"You",
             message:"Sent your location",
             createdAt:moment().valueOf()
         })
-        socket.broadcast.emit("location-message",{
-            name:"users[socket.id]",
+        socket.broadcast.to(user.room).emit("location-message",{
+            name:user.name,
             message:`${coords.lat}, ${coords.lng}`
         })
     })

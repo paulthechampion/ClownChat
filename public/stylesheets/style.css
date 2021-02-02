@@ -127,6 +127,13 @@ h4{
     padding-top: 1em;
     width: 100%;
 }
+.location-message{
+    background-color:rgb(230, 69, 6) ;
+    color: white;
+    padding-left: 2em;
+    padding-top: 1em;
+    width: 100%;
+}
 
 .side-bar-main.active{
     left: 0;
@@ -184,7 +191,7 @@ h4{
             height: 40em;
         }   
         .message-inputClass{
-            width:47em; 
+            width:37em; 
             height:5em;
         }
         .message-sendClass{

@@ -123,7 +123,9 @@ socket.on("location-message",data=>{
         time:formattedTime
     })
     const div = document.createElement("div")
+    div.classList.add("location-message")
     div.innerHTML =html
+
 
     document.querySelector("#messages").appendChild(div) 
    scrollToBottom()
