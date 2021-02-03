@@ -13,6 +13,19 @@ html{
     text-align: center;
     color: aliceblue;
     font-size: 3em;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.header-div{
+    text-align: center;
+}
+
+.clown-pic{
+    height: 4em;
+    width: 4em;
+    margin: 0;
 }
 
 
@@ -77,7 +90,7 @@ h4{
        color: rgb(0, 0, 0);
        border-radius: 5px;
        position: absolute;
-       top:9.15em;
+       top:10em;
        left: -250px;
        transition: ease-in-out .5s;
 }
@@ -146,7 +159,7 @@ h4{
 
 .index-form-div{
     text-align: center;
-    margin-top: 15em;
+    margin-top: 10em;
 }
 .index-label{
     color: white;
@@ -174,7 +187,7 @@ h4{
        }  
     .side-bar-main{
          height: 27.5em;
-         top:19.8%;;
+         top:15%;;
           
     }
     .message-inputClass{
@@ -185,7 +198,7 @@ h4{
 @media(min-width :590px){
         .side-bar-main{
             height: 40em;
-            top:9.1em;
+            top:6.8em;
         }
         #message-container{
             height: 40em;
@@ -234,7 +247,7 @@ h4{
         margin-top: 0;
      }
      .index-form-div{
-        margin-top: 15%;
+        margin-top: 10%;
     }
     .index-label{
         font-size: 2em;
