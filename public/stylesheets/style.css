@@ -512,6 +512,11 @@ h4{
     top:10px;
 }
 
+
+#send-button {
+    color: blue;
+}
+
 @media(min-width :413px){
     #message-container{
        
