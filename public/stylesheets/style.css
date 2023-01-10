@@ -624,6 +624,11 @@ h4{
         margin-top: 2em;
     }
 
+    #send-button {
+        color: blue;
+        border-radius: 2px;
+    }
+
     .index-btn {
         width: 85%;
         padding: 15px;
