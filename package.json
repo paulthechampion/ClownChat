@@ -4,7 +4,8 @@
   "description": "Clown's Chatt",
   "main": "index.js",
   "scripts": {
-    "devStart": "node server.js"
+    "devStart": "node server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
