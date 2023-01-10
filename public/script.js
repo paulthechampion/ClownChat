@@ -24,6 +24,7 @@ messageForm.addEventListener('submit', e=>{
         })
         const div = document.createElement("div")
         div.classList.add("your-message")
+        div.classList.add("message-box")
         div.innerHTML =html
     
         document.querySelector("#messages").appendChild(div) 
@@ -56,7 +57,7 @@ function appendMessg(message){
 };
 //user name
 
-appendMessg('You joined');
+
 
 
 socket.on('connect', function() {
@@ -70,6 +71,8 @@ socket.on('connect', function() {
         console.log('No Error');
       }
     })
+
+    document.getElementById("roomName").innerText = `${params.room} room`
   });
 
 socket.on('disconnect',()=>{
@@ -100,9 +103,15 @@ socket.on('chat-message', data=>{
         message:data.message,
         time:formattedTime
     })
+    
+    
     const div = document.createElement("div")
     div.innerHTML =html
     div.classList.add("their-message")
+    div.classList.add("message-box")
+    if(data.name === "Admin") {
+        div.classList.add("admin-box")
+    }
         div.innerHTML =html
 
     document.querySelector("#messages").appendChild(div) 
@@ -114,16 +123,17 @@ socket.on("location-message",data=>{
     let a =document.createElement('a');
     a.setAttribute("target","_blank")
     a.setAttribute("href",`https://www.google.com/m?q=${data.message}`)
-    a.innerText= `This is my Location`;
+    a.innerText= `Click to view my Location`;
     const template = document.querySelector("#message-template").innerHTML;
     const html = Mustache.render(template,{
         user:data.name,
-        aMessage:"This is My Location",
+        aMessage:"Click to view my Location",
         aHref:`https://www.google.com/maps/place/${data.message}`,
         time:formattedTime
     })
     const div = document.createElement("div")
     div.classList.add("location-message")
+    div.classList.add("message-box")
     div.innerHTML =html
 
 
@@ -143,5 +153,6 @@ socket.on("updateUserList",function(users){
     userslist.classList.add("userListClass")
     userslist.innerHTML=""
     userslist.appendChild(ol)
+    document.getElementById("online").innerText = users.length > 1 ? `{${users.length}} Clowns Online ` :`{${users.length}} Clown Online `
     
 })

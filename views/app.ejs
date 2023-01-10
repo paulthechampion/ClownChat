@@ -1,10 +1,33 @@
+<div class="header-linear-div"></div>
 <div class="header-div">
-    <h1 class="header">CLOWN CHAT</h1> <img src="/image/clown.png" class="clown-pic"/>
+    <img src="/image/clown.png" class="clown-pic"/> <h1 class="header">Clown Chat</h1>
+</div>
+<div class="minimenu">
+    <div class="mini-flex">
+        <div>
+            <p id="roomName"></p>
+        </div>
+        <div> 
+            <button type="button" id="send-location" class="message-sendClass message-locationClass"><img src="/image/location.png" class="location-pic"/> <span class="location-button-text">Share Location</span></button>
+            <a class="message-sendClass leaveRoom" href="/">Leave Room</a>
+        </div>
+    </div>
 </div>
 <span class="bars-span">
 <i class="fa fa-bars" aria-hidden="true" onclick="show2()"></i>
 </span>
-<div>
+<div class="message-main-div">
+    
+    <div class="side-bar-main" id="side-bar-main">
+        <div style="text-align: left; margin: 10px;">
+            <h2 id="online" style="display: inline;">Online Clowns </h2><i class="fa fa-circle" aria-hidden="true"></i>
+            
+        </div>
+        
+        <hr/>
+    <div class="side-bar" id="sidebar">
+    </div>
+    </div>
     <div id="message-container" class="message-container">
         
         <ol class="messages" id="messages"></ol>
@@ -12,35 +35,36 @@
         
         
     </div>
-    <div class="side-bar-main" id="side-bar-main">
-        <div style="text-align: center;">
-            <h2>Online Clowns <i class="fa fa-circle" aria-hidden="true"></i>
-            </h2>
-        </div>
-    <div class="side-bar" id="sidebar">
-    </div>
-    </div>
 </div>
 <div class="message-footer">
         
-        <form id="send-container" class="formClass">
-            <input type="text" id="message-input" required placeholder="Send a Message Clown" class="message-inputClass">
+        <form id="send-container" class="formClass" autocomplete="off">
+            <input type="text" id="message-input" required placeholder="Send a ClownMessage" class="message-inputClass">
             
             
             <input type="submit" id="send-button" value="Send" class="message-sendClass">
 
-            <button type="button" id="send-location" class="message-sendClass message-locationClass"> Send Your Location</button>
+            
             
             
 
          </form>
-    </div>    
+</div>    
         
+<div class="full-cover" id="full-cover" onclick="unShow()">
+
+</div>
    
     <script type="text/template" id="message-template">
         <li class="message">
             <div class="message-title">
-                <h4>{{user}} <span class="header-time">{{time}}</span></h4>
+                <div>
+                    <h4>{{user}}</h4>
+                </div>
+                <div>
+                    <span class="header-time">{{time}}</span>
+                </div>
+                 
                 
             </div>
             <div class="message-body">
@@ -53,6 +77,12 @@
     <script>
         function show2(){
             document.getElementById("side-bar-main").classList.toggle("active");
+            document.getElementById("full-cover").style.display = "block"
+        }
+
+        function unShow() {
+            document.getElementById("side-bar-main").classList.remove("active");
+            document.getElementById("full-cover").style.display = "none"
         }
     </script>
 

@@ -1,23 +1,24 @@
+<div class="header-linear-div"></div>
 <div class="header-div">
-    <h1 class="header">CLOWN CHAT</h1> <img src="/image/clown.png" class="clown-pic"/>
+    
+    <img src="/image/clown.png" class="clown-pic"/> <h1 class="header">Clown Chat</h1> 
+</div>
+<div class="blurredlines">
+
 </div>
 
 <div class="index-form-div">
-    <form action="/chat">
+    <form action="/chat" autocomplete="off">
         <div>
-            <div class="label-div">
-                 <label for="name" class="index-label">Display Name</label>
+            <div class="input-div">
+                <input type="text" name="name" required autofocus class="index-input" placeholder="Display Name"/>
             </div>
-            <input type="text" name="name" required autofocus class="index-input"/>
         </div>
         <div>
-            <div class="label-div">
-                <label for="room" class="index-label">Create room or Join exisiting room</label>
-            </div>
-            <input type="text" name="room" required autofocus class="index-input"/>
+            <input type="text" name="room" required autofocus class="index-input" placeholder="Create room or Join exisiting room"/>
 
             <div class="button-div">
-            <button class="index-btn">Start Chatting</button>
+            <button class="index-btn">Start Chat</button>
             </div>
         </div>
     </form>

@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.full-cover {
+    display:none;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
 html{
     height: 100%;
 }
@@ -16,16 +32,59 @@ html{
     margin: 0;
     padding: 0;
     display: inline;
+    position: relative;
+    bottom: 8px;
+    left: 15px;
+    font-family: Roboto;
+}
+
+.header-linear-div {
+    height: 10px;
+    width: 100%;
+    background-image: linear-gradient(to right,#0072FF,#866feb,#CA35E2,#3DAD9E,#1B007A,#340025,#CA35E2,#866feb,#0072FF);
+}
+
+.blurredlines {
+    height: 10px;
+    width: 100%;
+    background-color: rgb(182, 225, 241);
 }
 
 .header-div{
-    text-align: center;
+    text-align: left;
+    background-image:radial-gradient(#1C1A4C, #0A0616);
+    font-size: 12px;
+    padding: 10px;
+    padding-left: 20px;
+    font-family: Roboto;
 }
 
 .clown-pic{
-    height: 4em;
-    width: 4em;
+    height: 3.5em;
+    width: 3.5em;
     margin: 0;
+    border-radius: 100%;
+}
+
+.mini-flex {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mini-flex > div:first-child {
+    line-height: 50px;
+    
+    overflow-wrap: break-word;
+}
+
+.mini-flex > div:first-child > p {
+    line-height: normal;
+    display: block;
+    font-size: 20px;
+    padding-top: 10px;
+    overflow-wrap: break-word;
 }
 
 
@@ -38,14 +97,21 @@ html{
     outline: none; 
     border: none;
      border-radius: 5px; 
-     background-color: rgb(12, 212, 12);
+     background-color:rgb(79, 96, 243);
      color: aliceblue;
      padding-left: 1.5em;
      padding-right: 1.5em; 
      font-size: 1em;
      cursor: pointer;
      position: relative;
-     right:0%
+     right:0%;
+     transition: .3s ease-in-out;
+}
+
+.message-sendClass:hover {
+    background-color: white;
+    border: 2px solid rgb(79, 96, 243);
+    color: rgb(79, 96, 243);
 }
 
 .message-locationClass{ 
@@ -56,7 +122,8 @@ html{
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to right,  rgb(12, 12, 212), purple);
+    background: linear-gradient(to right, #79dcfa , #c9adf3 , #79dcfa, #5ae4ee, #c9adf3, skyblue);
+    
   }
 
 li{
@@ -68,31 +135,39 @@ h4{
 }
 .message-body{
     position: relative;
-    bottom: 1em;
+    z-index: 1;
+    padding-left: 10px;
 }
+
+.message-main-div {
+    display: flex;
+    flex-wrap:wrap ;
+    width: 75%;
+    margin: auto;
+}
+
 #message-container{
     background-color: aliceblue;
-    border-radius: 5px;
+    border-radius: 7px;
     padding-left: 1em;
-    float: right;
     height: 24em;
     z-index: 0;
     overflow-y: auto;
     width: 97.3%;
     margin-bottom: 1em;
+    margin: auto;
    }  
 .side-bar-main{
        width: 250px;
-       float: left;
        z-index: 5;
-       background-color: rgb(233, 230, 230);
+       background-color: rgb(255, 255, 255);
        height: 24em;
-       color: rgb(0, 0, 0);
-       border-radius: 5px;
+       border-radius: 7px;
        position: absolute;
        top:10em;
        left: -250px;
        transition: ease-in-out .5s;
+       margin: auto;
 }
 
 .fa-circle{
@@ -101,9 +176,22 @@ h4{
 }
 
 .message-footer{
-   
-    padding-top: 4em;
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
 }
+
+.message-inputClass {
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.minimenu {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(245, 245, 245);
+}
+
 .messages{
     position: relative;
     right:3em;
@@ -120,32 +208,194 @@ h4{
 
 .side-bar{
     background-color: white;
-    padding: 1px;
+    margin: 20px;
     
 
 }
+.side-bar > ol > li {
+    margin-top: 15px;
+    font-size: 20px;
+    background-image: linear-gradient(to left, #0072FF, #E0E0E0, #003A33, #3DAD9E , #1B007A, #340025, #CA35E2, #000000, #00433F);
+    background-clip:text ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+
+}
+.side-bar > ol > li:first-child {
+    margin-top: 30px;
+}
+
+#message-container {
+    overflow-x: hidden;
+}
 
 .your-message{
-    background-color:rgb(161, 23, 161) ;
+    background-color:blue ;
     color: white;
     padding-left: 2em;
     padding-top: 1em;
-    width: 100%;
+    width: 80%;
+    clear: both;
+    border-top-right-radius: 0px;
+    position: relative;
+    box-shadow: -1px 3px 2px rgba(0,0,0,.3);
 }
 
+
+
 .their-message{
-    background-color:rgb(12, 12, 212) ;
+    background-color:#CA35E2 ;
     color: white;
     padding-left: 2em;
     padding-top: 1em;
-    width: 100%;
+    width: 80%;
+    clear: both;
+    border-top-left-radius: 0px;
+    
+    position: relative;
+    box-shadow: 1px 3px 2px rgba(0,0,0,.3);
 }
+
+
+.message-title {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+
+}
+
+.message-title > div:first-child {
+    text-align: left;
+    width: 50%;
+}
+
+.message-title > div:last-child {
+    text-align: right;
+    width: 50%;
+}
+
+.message-box {
+    margin: auto;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: small;
+    position: relative;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    overflow-wrap: break-word;
+    
+    height:auto;
+}
+
+.their-message > .message {
+    margin-top: -50px;
+}
+
+.your-message{ 
+    margin-left: 125px;
+}
+
+.message-box:first-child {
+    margin-top: 50px;
+}
+
+.their-message:before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-left: 15px solid transparent;
+    border-right: 30px solid #CA35E2;
+    border-top: 30px solid #CA35E2;
+    border-bottom: 15px solid transparent;
+    position: relative;
+    bottom: 14px;
+    left: -19px;
+    transform: rotate(10deg);
+    
+}
+
+.your-message:before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    border-left: 15px solid transparent;
+    border-right: 30px solid blue;
+    border-top: 30px solid blue;
+    border-bottom: 15px solid transparent;
+    position: relative;
+    transform: rotate(254deg);
+    float: right;
+    left: 18px;
+    bottom: 15px;
+}
+
+.admin-box {
+    background-color: black !important;
+}
+
+.admin-box::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-left: 15px solid transparent;
+    border-right: 30px solid black;
+    border-top: 30px solid black;
+    border-bottom: 15px solid transparent;
+    position: relative;
+    bottom: 14px;
+    left: -19px;
+    transform: rotate(12deg);
+}
+
 .location-message{
     background-color:rgb(230, 69, 6) ;
     color: white;
     padding-left: 2em;
     padding-top: 1em;
-    width: 100%;
+    width: 80%;
+    position: relative;
+    box-shadow: -1px 3px 2px rgba(0,0,0,.3);
+    margin-left: 125px;
+}
+
+.location-message:before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    border-left: 15px solid transparent;
+    border-right: 30px solid rgb(230, 69, 6);
+    border-top: 30px solid rgb(230, 69, 6);
+    border-bottom: 15px solid transparent;
+    position: relative;
+    float: right;
+    left: 18px;
+    bottom: 18px;
+    transform: rotate(254deg);
+}
+
+
+.your-message > .message > .message-title > div:last-child > .header-time {
+    position: relative;
+    left: 47px;
+}
+
+
+.location-message > .message > .message-title > div:last-child > .header-time {
+    position: relative;
+    left: 47px;
 }
 
 .side-bar-main.active{
@@ -161,24 +411,106 @@ h4{
     text-align: center;
     margin-top: 10em;
 }
+
+.label-div {
+    text-align: center;
+}
+
 .index-label{
     color: white;
     font-size: 1.3em;
+    text-align: left;
+    display: inline-block;
 }
 .index-input{
     width: 15em;
     height: 2em;
+    padding: 0.5rem;
+  border: double 3px transparent;
+  border-radius: 12px;
+  background-image: linear-gradient(#79dcfa, #5ae4ee), 
+                    linear-gradient(270.57deg, #0072FF 1.27%, #E0E0E0 11.08%, #003A33 24.5%, #3DAD9E 35.86%, #1B007A 51.87%, #340025 64.27%, #CA35E2 77.69%, #000000 89.05%, #00433F 100.41%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
 }
+
+
 .index-btn{
     border: none;
     outline: none;
-    background-color: rgb(134, 214, 14);
+    background-image: linear-gradient(270.57deg, #0072FF 1.27%, #E0E0E0 11.08%, #003A33 24.5%, #3DAD9E 35.86%, #1B007A 51.87%, #340025 64.27%, #CA35E2 77.69%, #000000 89.05%, #00433F 100.41%);;
     color: white;
     padding:10px;
     border-radius: 5px;
     margin-top: 1em;
     font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.index-btn:hover{ 
+    background-image: linear-gradient(-270.57deg, #0072FF 1.27%, #E0E0E0 11.08%, #003A33 24.5%, #3DAD9E 35.86%, #1B007A 51.87%, #340025 64.27%, #CA35E2 77.69%, #000000 89.05%, #00433F 100.41%);;
+   
+}
+
+.message-locationClass {
+    background-color: white;
+    border: 2px solid grey;
+    background-image: linear-gradient(to left, #0072FF, #E0E0E0, #003A33, #3DAD9E , #1B007A, #340025, #CA35E2, #000000, #00433F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.location-pic {
+    width: 2em;
+    height: 2em;
+}
+
+
+.location-button-text {
+    position: relative;
+    bottom: 10px;
+ }
+
+ .leaveRoom {
+    margin: 0;
+    background-image: linear-gradient(270.57deg, #0072FF 1.27%, #E0E0E0 11.08%, #003A33 24.5%, #3DAD9E 35.86%, #1B007A 51.87%, #340025 64.27%, #CA35E2 77.69%, #000000 89.05%, #00433F 100.41%);;
+    position: relative;
+    bottom: 8px;
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+    text-decoration: none;
+ }
+
+ .fa-circle {
+    font-size: 15px;
+ }
+
+ .leaveRoom:hover{ 
+    background-image: linear-gradient(-270.57deg, #0072FF 1.27%, #E0E0E0 11.08%, #003A33 24.5%, #3DAD9E 35.86%, #1B007A 51.87%, #340025 64.27%, #CA35E2 77.69%, #000000 89.05%, #00433F 100.41%);;
+   border: none;
+   color: white;
+}
+
+.message-footer {
+    text-align: center;
+}
+
+.message-inputClass{
+     padding-left: 1em;
+}
+
+.fa-bars {
+    color: purple;
+    position: relative;
+    left: 10px;
+    z-index: 1;
+    top:10px;
+}
+
 @media(min-width :413px){
     #message-container{
        
@@ -191,7 +523,6 @@ h4{
           
     }
     .message-inputClass{
-        width:22em; 
         height:3em;
     }
 }
@@ -202,14 +533,7 @@ h4{
         }
         #message-container{
             height: 40em;
-        }   
-        .message-inputClass{
-            width:37em; 
-            height:5em;
-        }
-        .message-sendClass{
-            height:4.5em;
-        }
+        }  
         .message-locationClass{ 
            
             left: 35%;
@@ -219,16 +543,19 @@ h4{
 @media(min-width :1085px){
    
     .message-inputClass{
-        width:72em;
-         height:5em;
+        width:85%;
+         height:3em;
+         padding-left: 1em;
     }
     .message-sendClass{
-        height:4.5em;
+        margin: auto;
+        height:2.6em;
+        margin-left: 24px;
     }
 
     #message-container{
-        width: 73.5%;
-        height: 25em;
+        width: 70%;
+        height: 24em;
     }   
 
     .side-bar-main{
@@ -236,7 +563,27 @@ h4{
         position: relative;
         top:0;
         left:0;
-        height: 25em;
+        height: 24em;
+    }
+
+    .mini-flex > div:first-child {
+        width: 25%;
+        background-color: white;
+        text-align: center;
+        margin: auto;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .mini-flex > div:last-child {
+        width: 70%;
+        text-align: right;
+        background-color: white;
+        margin: auto;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .bars-span{
@@ -245,21 +592,164 @@ h4{
     .message-locationClass{ 
         left: 0;
         margin-top: 0;
+        padding-left: 5px;
+        padding-right: 10px;
      }
+
+
      .index-form-div{
         margin-top: 10%;
     }
-    .index-label{
-        font-size: 2em;
-    }
     .index-input{
-        width: 20em;
-        height: 2em;
+        width: 305px;
+        height: 1.5em;
+        font-size: 18px;
+        margin: 10px;
+        color: black;
     }
     .index-btn{
-        padding:10px;
-        border-radius: 5px;
+        padding:13px;
+        border-radius: 12px;
         margin-top: 1em;
         font-size: 1.2em;
+        width: 328px;
+        font-size: 17px;
     }
     }    
+
+@media(max-width :700px){ 
+    .index-input {
+        width: 80%;
+        margin-top: 2em;
+    }
+
+    .index-btn {
+        width: 85%;
+        padding: 15px;
+        margin-top: 2em;
+    }
+
+    .message-main-div { 
+        width: 100%;
+    }
+
+    #message-container {
+        width: 85%;
+    }
+
+    .your-message {
+        margin-left: 70px;
+    }
+    .location-message {
+        margin-left: 70px;
+    }
+
+    .message-footer {
+        width: 95%;
+        margin-top: 2em;
+    }
+
+    .message-inputClass {
+        width: 70%;
+    }
+
+    .mini-flex {
+        width: 100%;
+    }
+
+    .mini-flex > div:first-child {
+        width: 28%;
+        padding-left: 10px;
+    }
+
+    .mini-flex > div:last-child {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .message-locationClass {
+        margin: auto;
+        margin-top: 1em;
+        font-size: 10px;
+        left: 0;
+    }
+
+    .location-button-text {
+        bottom: 5px;
+    }
+
+    .leaveRoom {
+        margin: auto;
+        margin-top: 1em;
+        font-size: 10px;
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (max-width:1085px ) and (min-width: 701px) { 
+    .index-input {
+        width: 30em;
+        margin-top: 2em;
+    }
+    .index-btn {
+        width: 26.5em;
+        padding: 13px;
+        margin-top: 2em;
+    }
+
+    .message-footer {
+        width: 95%;
+        margin-top: 2em;
+    }
+
+    .message-inputClass {
+        width: 65%;
+    }
+
+    .mini-flex {
+        width: 100%;
+    }
+
+    .mini-flex > div:first-child {
+        width: 28%;
+        padding-left: 10px;
+
+        padding-top: 1em;
+    }
+
+    .mini-flex > div:last-child {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .message-locationClass {
+        margin: auto;
+        margin-top: 1em;
+        font-size: 15px;
+        left: 0;
+    }
+
+    .location-button-text {
+        bottom: 5px;
+    }
+
+    .leaveRoom {
+        margin: auto;
+        margin-top: 1em;
+        font-size: 15px;
+        margin-left: 1em;
+    }
+}
+
+@media(max-width :370px){ 
+    .message-locationClass {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    #send-button {
+        margin-top: 1em;
+    }
+}
