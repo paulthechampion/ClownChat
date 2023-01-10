@@ -457,10 +457,7 @@ h4{
 .message-locationClass {
     background-color: white;
     border: 2px solid grey;
-    background-image: linear-gradient(to left, #0072FF, #E0E0E0, #003A33, #3DAD9E , #1B007A, #340025, #CA35E2, #000000, #00433F);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
     text-align: center;
 }
 
@@ -473,6 +470,10 @@ h4{
 .location-button-text {
     position: relative;
     bottom: 10px;
+    background-image: linear-gradient(to left, #0072FF, #E0E0E0, #003A33, #3DAD9E , #1B007A, #340025, #CA35E2, #000000, #00433F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
  }
 
  .leaveRoom {
