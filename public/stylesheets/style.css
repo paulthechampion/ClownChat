@@ -514,7 +514,7 @@ h4{
 
 
 #send-button {
-    color: blue;
+    background-color: blue;
 }
 
 @media(min-width :413px){
@@ -630,8 +630,9 @@ h4{
     }
 
     #send-button {
-        color: blue;
+        background-color:blue;
         border-radius: 2px;
+        height: 2.5em;
     }
 
     .index-btn {
