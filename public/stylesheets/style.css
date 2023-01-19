@@ -765,3 +765,33 @@ h4{
         margin-top: 1em;
     }
 }
+
+@media(min-height : 750px) {
+    #message-container {
+        height: 30em;
+    }
+
+    .side-bar-main {
+        height: 30em;
+    }
+}
+
+@media(min-height : 750px) {
+    #message-container {
+        height: 30em;
+    }
+
+    .side-bar-main {
+        height: 30em;
+    }
+}
+
+@media(min-height : 800px) {
+    #message-container {
+        height: 33em;
+    }
+
+    .side-bar-main {
+        height: 33em;
+    }
+}
