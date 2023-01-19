@@ -807,7 +807,7 @@ h4{
     }
 }
 
-@media(min-width : 450px) { 
+@media(max-width : 450px) { 
  #message-container {
     height: 40em;
  }
