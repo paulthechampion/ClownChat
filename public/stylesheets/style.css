@@ -561,7 +561,7 @@ h4{
 
     #message-container{
         width: 70%;
-        height: 24em;
+        height: 27em;
     }   
 
     .side-bar-main{
@@ -624,6 +624,16 @@ h4{
     }    
 
 @media(max-width :700px){ 
+    .second-header {
+        padding-bottom: 2px;
+    }
+    .second-header > img {
+        height: 2em;
+        width: 2em;
+    }
+    .second-header > h1 {
+        font-size: 1.5em;
+    }
     .index-input {
         width: 80%;
         margin-top: 2em;
@@ -643,6 +653,7 @@ h4{
 
     .message-main-div { 
         width: 100%;
+        margin-top: -1.5em;
     }
 
     #message-container {
