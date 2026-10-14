@@ -41,8 +41,14 @@ db.on('error',error=>console.error(error));
 db.once('open',()=>console.log('Connected to mongoose'));
 
 
-const server=app.listen(process.env.PORT ||2000, ()=>{
-   console.log("Listening to port 2000") 
+// const server=app.listen(process.env.PORT ||2000, ()=>{
+//    console.log("Listening to port 2000") 
+// });
+
+const PORT = process.env.PORT || 2000;
+
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Listening on port ${PORT}`);
 });
 const socket=require("socket.io");
 
